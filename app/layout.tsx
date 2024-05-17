@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+import NextTopLoader from 'nextjs-toploader';
 import { Changa } from 'next/font/google';
-import './globals.css';
 import Navbar from '@/components/navbar';
+import type { Metadata } from 'next';
+import './globals.css';
 
 const font = Changa({
   subsets: ['arabic'],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html dir='rtl' lang='en' data-theme='cupcake'>
       <body className={font.className + ' text-gray-700'}>
+        <NextTopLoader color='#fe80acbc' height={5} />
         <Navbar />
         <div className='bg-slate-50'>{children}</div>
       </body>

@@ -1,9 +1,14 @@
-import { CheckCircleIcon, WhatsappIcon, XCircleIcon } from '@/components/icons';
-import { notFound } from 'next/navigation';
-import { fakeProducts } from '@/utils';
+import {
+  CheckCircleIcon,
+  FacebookIcon,
+  WhatsappIcon,
+  XCircleIcon,
+} from '@/components/icons';
+import ProductImagesCarousel from '@/components/product-iamges-carousel';
 import FormattedPrice from '@/components/formatted-price';
 import ProductPoster from '@/components/product-poster';
-import ProductImagesCarousel from '@/components/product-iamges-carousel';
+import { notFound } from 'next/navigation';
+import { fakeProducts } from '@/utils';
 
 export default function Home({ params: { id } }: { params: { id: string } }) {
   const product = fakeProducts.find((product) => product.id === parseInt(id));
@@ -14,7 +19,7 @@ export default function Home({ params: { id } }: { params: { id: string } }) {
   const isAvailable = true;
 
   return (
-    <main className='flex flex-col items-center justify-between min-h-screen p-4 gap-y-5 md:p-6 lg:p-12 caontainer'>
+    <main className='flex flex-col items-center justify-between min-h-[calc(100vh-100px)] p-4 gap-y-5 md:p-6 lg:p-12'>
       <section className='flex flex-col w-full md:flex-row gap-x-10 gap-y-6'>
         <ProductPoster {...product} />
         <div>
@@ -51,13 +56,28 @@ export default function Home({ params: { id } }: { params: { id: string } }) {
             بعض بل, بها ببعض النفط وبالتحديد، ثم.
           </p>
 
-          <a
-            className='w-full rounded-full md:w-fit text-base-100 btn btn-success'
-            href='#whatsapp'
-          >
-            تواصل معنا على الواتساب
-            <WhatsappIcon />
-          </a>
+          <p>
+            <span className='block mb-3 text-xl font-semibold text-gray-600'>
+              تواصل معنا على :
+            </span>
+
+            <span className='grid w-full grid-cols-2 md:flex gap-x-4 md:gap-x-6'>
+              <a
+                className='w-full px-6 rounded-full md:w-auto text-base-100 btn btn-success'
+                href='#whatsapp'
+              >
+                واتساب
+                <WhatsappIcon />
+              </a>
+              <a
+                className='w-full px-6 rounded-full md:w-fit text-base-100 btn btn-primary'
+                href='#facebook'
+              >
+                فيسبوك
+                <FacebookIcon />
+              </a>
+            </span>
+          </p>
         </div>
       </section>
 

@@ -5,6 +5,7 @@
 @layer base {
   [data-theme='cupcake'] {
     --rounded-btn: 1rem;
+    --p: 57.79% 0.146 262.83 !important;
   }
 
   [data-theme='cupcake'] .btn-ghost:hover {

@@ -8,11 +8,11 @@ export default function ProductImagesCarousel({
   images: string[];
 }) {
   return (
-    <div className='carousel carousel-center rounded-box h-[80vh]'>
+    <div className='carousel carousel-center border-2 rounded-box h-[70vh]'>
       {images.map((image, i) => (
-        <div key={i} className='carousel-item'>
+        <div key={i} className='w-full carousel-item bg-slate-100'>
           <Image
-            className='object-cover w-full h-full border-2 select-none'
+            className='object-contain w-full h-full select-none'
             alt='Product'
             src={image}
             key={image}

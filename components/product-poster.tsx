@@ -13,24 +13,24 @@ export default function ProductPoster(product: Product) {
   };
 
   return (
-    <figure className='relative overflow-hidden max-w-96 w-full max-h-[70vh] group shadow-sm bg-base-100'>
+    <figure className='rounded-lg mx-auto md:mx-0 overflow-hidden relative w-full md:min-w-72 max-h-[70vh] group shadow-sm bg-base-100'>
       <Image
-        className='object-contain w-full h-full bg-top rounded-lg'
+        className='object-cover w-full h-full'
         src={product.image}
         alt={product.name}
-        width={500}
         height={500}
+        width={500}
       />
 
       <div
-        onClick={toggleBookmark}
         className='absolute top-0 left-0 flex items-center justify-center w-full h-full transition opacity-0 cursor-pointer backdrop-blur-sm group-hover:opacity-100 bg-slate-900/40'
+        onClick={toggleBookmark}
       >
         <BookmarkIcon
-          key={bookmarked ? 'bookmarked_is_true' : 'bookmarked_is_false'}
           className={
             'popup w-1/4 text-secondary ' + (bookmarked ? 'fill-current' : '')
           }
+          key={product.name + (bookmarked ? 'bookmarked' : 'not_bookmarked')}
         />
       </div>
     </figure>

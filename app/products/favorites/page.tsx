@@ -4,7 +4,7 @@ import { fakeProducts } from '@/utils';
 
 export default function Home() {
   return (
-    <main className='flex flex-col items-center justify-between min-h-screen p-4 gap-y-5 md:p-6 lg:p-12 caontainer'>
+    <main className=' flex flex-col items-center justify-between min-h-[calc(100vh-100px)] p-4 gap-y-5 md:p-6 lg:p-12'>
       <section className='w-full'>
         <h1 className='pt-3 mb-5 text-lg font-semibold text-center md:mb-8 sm:text-2xl md:text-3xl lg:text-4xl'>
           المنتجات المفضلة{' '}
