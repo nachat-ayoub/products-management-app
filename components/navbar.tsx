@@ -11,10 +11,10 @@ const Navbar = () => {
           <div className='flex items-center p-2 gap-x-2'>
             <span>
               <Image
-                className='w-12 h-12 rounded-lg'
-                src={'https://i.imgur.com/7FwVeVS.png'}
-                height={40}
-                width={40}
+                className='w-16 h-16'
+                src={'https://i.imgur.com/Q5vicdu.png'}
+                height={100}
+                width={100}
                 alt='Logo'
               />
             </span>
